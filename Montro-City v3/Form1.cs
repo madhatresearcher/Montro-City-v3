@@ -56,5 +56,10 @@ namespace Montro_City_v3
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
