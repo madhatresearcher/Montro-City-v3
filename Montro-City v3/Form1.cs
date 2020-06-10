@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Montro_City_v3
 {
@@ -69,6 +70,15 @@ namespace Montro_City_v3
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ManageBrand_Click(object sender, EventArgs e)
+        {
+            FormBrand frm = new FormBrand();
+            frm.TopLevel = false;
+            panel3.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
         }
     }
 }
