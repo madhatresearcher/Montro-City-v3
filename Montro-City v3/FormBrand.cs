@@ -20,5 +20,16 @@ namespace Montro_City_v3
                 dataGridView1.Rows.Add(i, "1", "BRAND1 " + i);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form2Brand form2Brand = new Form2Brand();
+            form2Brand.ShowDialog();
+        }
     }
 }

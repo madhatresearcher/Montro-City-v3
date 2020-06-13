@@ -38,12 +38,19 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ScrapItemButton = new System.Windows.Forms.PictureBox();
+            this.AddItemButton = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScrapItemButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddItemButton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.AddItemButton);
+            this.panel1.Controls.Add(this.ScrapItemButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -131,6 +138,30 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
             // 
+            // ScrapItemButton
+            // 
+            this.ScrapItemButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ScrapItemButton.Image = ((System.Drawing.Image)(resources.GetObject("ScrapItemButton.Image")));
+            this.ScrapItemButton.Location = new System.Drawing.Point(849, 0);
+            this.ScrapItemButton.Name = "ScrapItemButton";
+            this.ScrapItemButton.Size = new System.Drawing.Size(43, 40);
+            this.ScrapItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ScrapItemButton.TabIndex = 0;
+            this.ScrapItemButton.TabStop = false;
+            this.ScrapItemButton.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // AddItemButton
+            // 
+            this.AddItemButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddItemButton.Image = ((System.Drawing.Image)(resources.GetObject("AddItemButton.Image")));
+            this.AddItemButton.Location = new System.Drawing.Point(802, 0);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(43, 40);
+            this.AddItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.AddItemButton.TabIndex = 1;
+            this.AddItemButton.TabStop = false;
+            this.AddItemButton.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // FormBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -144,7 +175,10 @@
             this.Name = "FormBrand";
             this.Text = "FormBrand";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScrapItemButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddItemButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,7 +192,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-
-        
+        private System.Windows.Forms.PictureBox ScrapItemButton;
+        private System.Windows.Forms.PictureBox AddItemButton;
     }
 }
