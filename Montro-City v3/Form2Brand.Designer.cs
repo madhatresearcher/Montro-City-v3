@@ -37,6 +37,9 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.ScrapButton = new System.Windows.Forms.Button();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.LabelOfID = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +64,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -81,6 +85,7 @@
             this.label2.Size = new System.Drawing.Size(106, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Brand Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // BrandTextBox
             // 
@@ -115,6 +120,7 @@
             this.UpdateButton.TabIndex = 5;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // ScrapButton
             // 
@@ -129,12 +135,44 @@
             this.ScrapButton.Text = "Cancel";
             this.ScrapButton.UseVisualStyleBackColor = false;
             // 
+            // IDLabel
+            // 
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(575, 123);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(0, 23);
+            this.IDLabel.TabIndex = 7;
+            this.IDLabel.Visible = false;
+            // 
+            // LabelOfID
+            // 
+            this.LabelOfID.AutoSize = true;
+            this.LabelOfID.Location = new System.Drawing.Point(542, 112);
+            this.LabelOfID.Name = "LabelOfID";
+            this.LabelOfID.Size = new System.Drawing.Size(0, 23);
+            this.LabelOfID.TabIndex = 8;
+            this.LabelOfID.Visible = false;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(180, 151);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(55, 23);
+            this.lblID.TabIndex = 9;
+            this.lblID.Text = "label3";
+            this.lblID.Visible = false;
+            this.lblID.Click += new System.EventHandler(this.lblID_Click);
+            // 
             // Form2Brand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 271);
             this.ControlBox = false;
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.LabelOfID);
+            this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.ScrapButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.SaveButton);
@@ -161,9 +199,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox BrandTextBox;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button ScrapButton;
+        public System.Windows.Forms.TextBox BrandTextBox;
+        private System.Windows.Forms.Label IDLabel;
+        public System.Windows.Forms.Label LabelOfID;
+        private System.Windows.Forms.Label lblID;
     }
 }

@@ -16,11 +16,18 @@ namespace Montro_City_v3
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
         DBConnection dbcon = new DBConnection();
+        FormBrand frmlist;
+        
 
-        public Form2Brand()
+        public Form2Brand(FormBrand flist)
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.MyConnection());
+            frmlist = flist;
+        }
+
+        public Form2Brand()
+        {
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -55,9 +62,38 @@ namespace Montro_City_v3
                     cn.Close();
                     MessageBox.Show("Saved!!!");
                     Clear();
+                    frmlist.LoadRecords();
                 }
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Proceed with brand edit?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
+
+            }
+            catch(Exception ex) 
+            {
+                
+            }
         }
     }
 }

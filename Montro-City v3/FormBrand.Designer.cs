@@ -28,34 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBrand));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBrand));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AddItemButton = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ScrapItemButton = new System.Windows.Forms.PictureBox();
-            this.AddItemButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScrapItemButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddItemButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.AddItemButton);
-            this.panel1.Controls.Add(this.ScrapItemButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 40);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(805, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // AddItemButton
+            // 
+            this.AddItemButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddItemButton.Image = ((System.Drawing.Image)(resources.GetObject("AddItemButton.Image")));
+            this.AddItemButton.Location = new System.Drawing.Point(759, 0);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(43, 40);
+            this.AddItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.AddItemButton.TabIndex = 1;
+            this.AddItemButton.TabStop = false;
+            this.AddItemButton.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dataGridView1
             // 
@@ -96,6 +120,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(900, 607);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -138,30 +163,6 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
             // 
-            // ScrapItemButton
-            // 
-            this.ScrapItemButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ScrapItemButton.Image = ((System.Drawing.Image)(resources.GetObject("ScrapItemButton.Image")));
-            this.ScrapItemButton.Location = new System.Drawing.Point(849, 0);
-            this.ScrapItemButton.Name = "ScrapItemButton";
-            this.ScrapItemButton.Size = new System.Drawing.Size(43, 40);
-            this.ScrapItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ScrapItemButton.TabIndex = 0;
-            this.ScrapItemButton.TabStop = false;
-            this.ScrapItemButton.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // AddItemButton
-            // 
-            this.AddItemButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddItemButton.Image = ((System.Drawing.Image)(resources.GetObject("AddItemButton.Image")));
-            this.AddItemButton.Location = new System.Drawing.Point(802, 0);
-            this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(43, 40);
-            this.AddItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.AddItemButton.TabIndex = 1;
-            this.AddItemButton.TabStop = false;
-            this.AddItemButton.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // FormBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -176,9 +177,9 @@
             this.Text = "FormBrand";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScrapItemButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddItemButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,7 +193,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.PictureBox ScrapItemButton;
         private System.Windows.Forms.PictureBox AddItemButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

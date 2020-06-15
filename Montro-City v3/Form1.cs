@@ -80,5 +80,10 @@ namespace Montro_City_v3
             frm.BringToFront();
             frm.Show();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
