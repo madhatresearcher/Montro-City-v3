@@ -1,6 +1,6 @@
 ﻿namespace Montro_City_v3
 {
-    partial class FormBrand
+    partial class CategoryListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBrand));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryListForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddItemButton = new System.Windows.Forms.PictureBox();
+            this.CategoryListLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.BrandLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddItemButton)).BeginInit();
@@ -50,14 +50,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.BrandLabel);
+            this.panel1.Controls.Add(this.CategoryListLabel);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.AddItemButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 40);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -69,7 +69,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // AddItemButton
             // 
@@ -81,7 +80,16 @@
             this.AddItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.AddItemButton.TabIndex = 1;
             this.AddItemButton.TabStop = false;
-            this.AddItemButton.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // CategoryListLabel
+            // 
+            this.CategoryListLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryListLabel.Location = new System.Drawing.Point(6, 2);
+            this.CategoryListLabel.Name = "CategoryListLabel";
+            this.CategoryListLabel.Size = new System.Drawing.Size(153, 37);
+            this.CategoryListLabel.TabIndex = 4;
+            this.CategoryListLabel.Text = "CATEGORY LIST";
+            this.CategoryListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -121,8 +129,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(900, 607);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.TabIndex = 3;
             // 
             // Column1
             // 
@@ -143,7 +150,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "BRAND";
+            this.Column3.HeaderText = "CATEGORY";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
@@ -165,17 +172,7 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
             // 
-            // BrandLabel
-            // 
-            this.BrandLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandLabel.Location = new System.Drawing.Point(13, 0);
-            this.BrandLabel.Name = "BrandLabel";
-            this.BrandLabel.Size = new System.Drawing.Size(130, 37);
-            this.BrandLabel.TabIndex = 3;
-            this.BrandLabel.Text = "BRAND LIST";
-            this.BrandLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // FormBrand
+            // CategoryListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,8 +182,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FormBrand";
-            this.Text = "FormBrand";
+            this.Name = "CategoryListForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -199,14 +195,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox AddItemButton;
+        private System.Windows.Forms.Label CategoryListLabel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.PictureBox AddItemButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label BrandLabel;
     }
 }

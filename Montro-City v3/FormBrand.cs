@@ -38,6 +38,7 @@ namespace Montro_City_v3
         {
             Form2Brand form2Brand = new Form2Brand(this);
             form2Brand.ShowDialog();
+            
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -68,7 +69,20 @@ namespace Montro_City_v3
                 Form2Brand FormTwoBrand = new Form2Brand(this);
                 FormTwoBrand.LabelOfID.Text= dataGridView1[1, e.RowIndex].Value.ToString();
                 FormTwoBrand.BrandTextBox.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                
                 FormTwoBrand.ShowDialog();
+            }
+            else if(ColName=="Delete")
+            {
+                if(MessageBox.Show("Delete this record?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("delete from BrandTable where id like '" + dataGridView1[1, e.RowIndex].Value.ToString()+"'",cn);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Done!","POS",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    LoadRecords();
+                }
             }
         }
     }

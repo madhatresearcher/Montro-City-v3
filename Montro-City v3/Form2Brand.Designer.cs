@@ -39,7 +39,6 @@
             this.ScrapButton = new System.Windows.Forms.Button();
             this.IDLabel = new System.Windows.Forms.Label();
             this.LabelOfID = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +56,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(867, 1);
             this.pictureBox1.Name = "pictureBox1";
@@ -153,24 +153,12 @@
             this.LabelOfID.TabIndex = 8;
             this.LabelOfID.Visible = false;
             // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(180, 151);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(55, 23);
-            this.lblID.TabIndex = 9;
-            this.lblID.Text = "label3";
-            this.lblID.Visible = false;
-            this.lblID.Click += new System.EventHandler(this.lblID_Click);
-            // 
             // Form2Brand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 271);
             this.ControlBox = false;
-            this.Controls.Add(this.lblID);
             this.Controls.Add(this.LabelOfID);
             this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.ScrapButton);
@@ -205,6 +193,5 @@
         public System.Windows.Forms.TextBox BrandTextBox;
         private System.Windows.Forms.Label IDLabel;
         public System.Windows.Forms.Label LabelOfID;
-        private System.Windows.Forms.Label lblID;
     }
 }

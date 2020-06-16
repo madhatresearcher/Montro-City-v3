@@ -36,7 +36,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.ManageBrand = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CategoryButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.ManageBrand);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.CategoryButton);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -152,19 +152,20 @@
             this.ManageBrand.UseVisualStyleBackColor = true;
             this.ManageBrand.Click += new System.EventHandler(this.ManageBrand_Click);
             // 
-            // button4
+            // CategoryButton
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(35, 281);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(260, 30);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Manage Category";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.CategoryButton.FlatAppearance.BorderSize = 0;
+            this.CategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CategoryButton.ForeColor = System.Drawing.Color.White;
+            this.CategoryButton.Image = ((System.Drawing.Image)(resources.GetObject("CategoryButton.Image")));
+            this.CategoryButton.Location = new System.Drawing.Point(35, 281);
+            this.CategoryButton.Name = "CategoryButton";
+            this.CategoryButton.Size = new System.Drawing.Size(260, 30);
+            this.CategoryButton.TabIndex = 6;
+            this.CategoryButton.Text = "Manage Category";
+            this.CategoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CategoryButton.UseVisualStyleBackColor = true;
+            this.CategoryButton.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
             // button3
             // 
@@ -281,7 +282,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button ManageBrand;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button CategoryButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button7;

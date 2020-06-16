@@ -70,7 +70,7 @@ namespace Montro_City_v3
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            this.Dispose();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -88,7 +88,17 @@ namespace Montro_City_v3
             try
             {
                 if (MessageBox.Show("Proceed with brand edit?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes);
-
+                {
+                    cn.Open();
+                    cm = new SqlCommand("update BrandTable set brand = @brand where id like '"+LabelOfID.Text+"'",cn);
+                    cm.Parameters.AddWithValue("@brand", BrandTextBox.Text);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Brand updated.");
+                    Clear();
+                    frmlist.LoadRecords();
+                    this.Dispose();
+                }
             }
             catch(Exception ex) 
             {

@@ -85,5 +85,14 @@ namespace Montro_City_v3
         {
 
         }
+
+        private void CategoryButton_Click(object sender, EventArgs e)
+        {
+            CategoryListForm clf = new CategoryListForm();
+            clf.TopLevel = false;
+            panel3.Controls.Add(clf);
+            clf.BringToFront();
+            clf.Show();
+        }
     }
 }
