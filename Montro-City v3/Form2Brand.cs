@@ -105,5 +105,11 @@ namespace Montro_City_v3
                 
             }
         }
+
+        private void ScrapButton_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            //MessageBox.Show("Operation Cancelled");
+        }
     }
 }

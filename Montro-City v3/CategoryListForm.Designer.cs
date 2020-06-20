@@ -32,9 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CategoryListLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddItemButton = new System.Windows.Forms.PictureBox();
-            this.CategoryListLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +59,16 @@
             this.panel1.Size = new System.Drawing.Size(900, 40);
             this.panel1.TabIndex = 2;
             // 
+            // CategoryListLabel
+            // 
+            this.CategoryListLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryListLabel.Location = new System.Drawing.Point(6, 2);
+            this.CategoryListLabel.Name = "CategoryListLabel";
+            this.CategoryListLabel.Size = new System.Drawing.Size(153, 37);
+            this.CategoryListLabel.TabIndex = 4;
+            this.CategoryListLabel.Text = "CATEGORY LIST";
+            this.CategoryListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -69,6 +79,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AddItemButton
             // 
@@ -80,16 +91,7 @@
             this.AddItemButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.AddItemButton.TabIndex = 1;
             this.AddItemButton.TabStop = false;
-            // 
-            // CategoryListLabel
-            // 
-            this.CategoryListLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryListLabel.Location = new System.Drawing.Point(6, 2);
-            this.CategoryListLabel.Name = "CategoryListLabel";
-            this.CategoryListLabel.Size = new System.Drawing.Size(153, 37);
-            this.CategoryListLabel.TabIndex = 4;
-            this.CategoryListLabel.Text = "CATEGORY LIST";
-            this.CategoryListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
             // dataGridView1
             // 
@@ -130,6 +132,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(900, 607);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 

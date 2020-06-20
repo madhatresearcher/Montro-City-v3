@@ -37,13 +37,15 @@ namespace Montro_City_v3
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Form2Brand form2Brand = new Form2Brand(this);
+            form2Brand.SaveButton.Enabled = true;
+            form2Brand.UpdateButton.Enabled = false;
             form2Brand.ShowDialog();
             
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
         public void LoadRecords()
         {
@@ -69,7 +71,8 @@ namespace Montro_City_v3
                 Form2Brand FormTwoBrand = new Form2Brand(this);
                 FormTwoBrand.LabelOfID.Text= dataGridView1[1, e.RowIndex].Value.ToString();
                 FormTwoBrand.BrandTextBox.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                
+                FormTwoBrand.SaveButton.Enabled = false;
+                FormTwoBrand.UpdateButton.Enabled = true;
                 FormTwoBrand.ShowDialog();
             }
             else if(ColName=="Delete")
