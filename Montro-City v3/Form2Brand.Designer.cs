@@ -97,6 +97,7 @@
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.ForeColor = System.Drawing.Color.White;
@@ -111,6 +112,7 @@
             // UpdateButton
             // 
             this.UpdateButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.UpdateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateButton.FlatAppearance.BorderSize = 0;
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.ForeColor = System.Drawing.Color.White;
@@ -125,6 +127,7 @@
             // ScrapButton
             // 
             this.ScrapButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ScrapButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ScrapButton.FlatAppearance.BorderSize = 0;
             this.ScrapButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ScrapButton.ForeColor = System.Drawing.Color.Black;

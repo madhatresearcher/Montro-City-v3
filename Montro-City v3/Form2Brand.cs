@@ -99,10 +99,11 @@ namespace Montro_City_v3
                     frmlist.LoadRecords();
                     this.Dispose();
                 }
+                
             }
             catch(Exception ex) 
             {
-                
+                MessageBox.Show(ex.Message);
             }
         }
 

@@ -61,7 +61,7 @@ namespace Montro_City_v3
                     cn.Close();
                     MessageBox.Show("Done!");
                     Clear();
-                    //listForm.LoadCategory();
+                    
                     listForm.LoadCategory();
                 }
             }
@@ -78,6 +78,30 @@ namespace Montro_City_v3
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Proceed with category edit?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+                {
+                    cn.Open();
+                    cm = new SqlCommand("update CategoryTable set category = @category where id like '" + LabelOfID.Text + "'", cn);
+                    cm.Parameters.AddWithValue("@category", CategoryTextBox.Text);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Category Updated.");
+                    Clear();
+                    listForm.LoadCategory();
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CategoryTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

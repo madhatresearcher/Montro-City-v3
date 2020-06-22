@@ -37,6 +37,7 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.LabelOfID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             // ScrapButton
             // 
             this.ScrapButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ScrapButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ScrapButton.FlatAppearance.BorderSize = 0;
             this.ScrapButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ScrapButton.ForeColor = System.Drawing.Color.Black;
@@ -92,6 +94,7 @@
             // UpdateButton
             // 
             this.UpdateButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.UpdateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateButton.FlatAppearance.BorderSize = 0;
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.ForeColor = System.Drawing.Color.White;
@@ -106,6 +109,7 @@
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.ForeColor = System.Drawing.Color.White;
@@ -123,6 +127,7 @@
             this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.Size = new System.Drawing.Size(599, 30);
             this.CategoryTextBox.TabIndex = 8;
+            this.CategoryTextBox.TextChanged += new System.EventHandler(this.CategoryTextBox_TextChanged);
             // 
             // label2
             // 
@@ -134,12 +139,21 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Category Name";
             // 
+            // LabelOfID
+            // 
+            this.LabelOfID.AutoSize = true;
+            this.LabelOfID.Location = new System.Drawing.Point(540, 118);
+            this.LabelOfID.Name = "LabelOfID";
+            this.LabelOfID.Size = new System.Drawing.Size(0, 23);
+            this.LabelOfID.TabIndex = 12;
+            // 
             // CategoryAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 271);
             this.ControlBox = false;
+            this.Controls.Add(this.LabelOfID);
             this.Controls.Add(this.ScrapButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.SaveButton);
@@ -170,5 +184,6 @@
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label LabelOfID;
     }
 }
