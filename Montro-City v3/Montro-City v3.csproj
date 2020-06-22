@@ -77,6 +77,12 @@
     <Compile Include="FormBrand.Designer.cs">
       <DependentUpon>FormBrand.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductListForm.Designer.cs">
+      <DependentUpon>ProductListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CategoryAdd.resx">
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBrand.resx">
       <DependentUpon>FormBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductListForm.resx">
+      <DependentUpon>ProductListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
