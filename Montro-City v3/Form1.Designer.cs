@@ -37,7 +37,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.ManageBrand = new System.Windows.Forms.Button();
             this.CategoryButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ProductButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.ManageBrand);
             this.panel2.Controls.Add(this.CategoryButton);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.ProductButton);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
@@ -173,20 +173,21 @@
             this.CategoryButton.UseVisualStyleBackColor = true;
             this.CategoryButton.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
-            // button3
+            // ProductButton
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(34, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(260, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Manage product";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.ProductButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProductButton.FlatAppearance.BorderSize = 0;
+            this.ProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProductButton.ForeColor = System.Drawing.Color.White;
+            this.ProductButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductButton.Image")));
+            this.ProductButton.Location = new System.Drawing.Point(34, 243);
+            this.ProductButton.Name = "ProductButton";
+            this.ProductButton.Size = new System.Drawing.Size(260, 30);
+            this.ProductButton.TabIndex = 5;
+            this.ProductButton.Text = "Manage product";
+            this.ProductButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ProductButton.UseVisualStyleBackColor = true;
+            this.ProductButton.Click += new System.EventHandler(this.ProductButton_Click);
             // 
             // button2
             // 
@@ -291,7 +292,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button ManageBrand;
         private System.Windows.Forms.Button CategoryButton;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ProductButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;

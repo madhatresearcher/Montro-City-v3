@@ -95,5 +95,15 @@ namespace Montro_City_v3
             clf.LoadCategory();
             clf.Show();
         }
+
+        private void ProductButton_Click(object sender, EventArgs e)
+        {
+            ProductListForm plf = new ProductListForm();
+            plf.TopLevel = false;
+            panel3.Controls.Add(plf);
+            plf.BringToFront();
+            plf.LoadRecords();
+            plf.Show();
+        }
     }
 }
