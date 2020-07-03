@@ -80,7 +80,7 @@ namespace Montro_City_v3
                 {
                     string bid="", cid="";
                     cn.Open();
-                    cm = new SqlCommand("Select bid from BrandTable where brand like '" + BrandComboBox.Text + "'", cn);
+                    cm = new SqlCommand("Select id from BrandTable where brand like '" + BrandComboBox.Text + "'", cn);
                     sdr = cm.ExecuteReader();
                     sdr.Read();
                     if(sdr.HasRows){bid = sdr[0].ToString();}
@@ -88,7 +88,7 @@ namespace Montro_City_v3
                     cn.Close();
 
                     cn.Open();
-                    cm = new SqlCommand("Select cid from CategoryTable where category like '" + CategoryComboBox.Text + "'", cn);
+                    cm = new SqlCommand("Select id from CategoryTable where category like '" + CategoryComboBox.Text + "'", cn);
                     sdr = cm.ExecuteReader();
                     sdr.Read();
                     if (sdr.HasRows) { cid = sdr[0].ToString(); }
@@ -132,11 +132,11 @@ namespace Montro_City_v3
         {
             try
             {
-                if (MessageBox.Show("Update Content?", "Save Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Update Content?", "Update Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string bid = "", cid = "";
                     cn.Open();
-                    cm = new SqlCommand("Select bid from BrandTable where brand like '" + BrandComboBox.Text + "'", cn);
+                    cm = new SqlCommand("Select id from BrandTable where brand like '" + BrandComboBox.Text + "'", cn);
                     sdr = cm.ExecuteReader();
                     sdr.Read();
                     if (sdr.HasRows) { bid = sdr[0].ToString(); }
@@ -144,7 +144,7 @@ namespace Montro_City_v3
                     cn.Close();
 
                     cn.Open();
-                    cm = new SqlCommand("Select cid from CategoryTable where category like '" + CategoryComboBox.Text + "'", cn);
+                    cm = new SqlCommand("Select id from CategoryTable where category like '" + CategoryComboBox.Text + "'", cn);
                     sdr = cm.ExecuteReader();
                     sdr.Read();
                     if (sdr.HasRows) { cid = sdr[0].ToString(); }
@@ -152,7 +152,7 @@ namespace Montro_City_v3
                     cn.Close();
 
                     cn.Open();
-                    cm = new SqlCommand("UPDATE ProductTable SET pdesc=@pdesc, bid=@bid, cid=@bid, price=@price where pcode like @pcode)", cn);
+                    cm = new SqlCommand("UPDATE ProductTable SET pdesc=@pdesc, bid=@bid, cid=@cid, price=@price where pcode like @pcode", cn);
                     cm.Parameters.AddWithValue("@pcode", PCODETextBox.Text);
                     cm.Parameters.AddWithValue("@pdesc", PDescTextBox.Text);
                     cm.Parameters.AddWithValue("@bid", bid);
@@ -160,7 +160,7 @@ namespace Montro_City_v3
                     cm.Parameters.AddWithValue("@price", PriceTextBox.Text);
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Saved.");
+                    MessageBox.Show("Done.");
                     Clear();
                     flist.LoadRecords();
                     this.Dispose();

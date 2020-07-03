@@ -109,6 +109,7 @@
             this.TextSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TextSearchBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.TextSearchBox.TextChanged += new System.EventHandler(this.TextSearchBox_TextChanged);
+            this.TextSearchBox.Click += new System.EventHandler(this.TextSearchBox_Click);
             // 
             // ProductListLabel
             // 

@@ -45,6 +45,8 @@
             this.ScrapButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(964, 40);
+            this.panel1.Size = new System.Drawing.Size(924, 40);
             this.panel1.TabIndex = 3;
             // 
             // ClosePictureBox
@@ -147,7 +149,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(54, 219);
+            this.label5.Location = new System.Drawing.Point(50, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 23);
             this.label5.TabIndex = 15;
@@ -177,7 +179,7 @@
             this.ScrapButton.FlatAppearance.BorderSize = 0;
             this.ScrapButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ScrapButton.ForeColor = System.Drawing.Color.Black;
-            this.ScrapButton.Location = new System.Drawing.Point(422, 312);
+            this.ScrapButton.Location = new System.Drawing.Point(422, 355);
             this.ScrapButton.Name = "ScrapButton";
             this.ScrapButton.Size = new System.Drawing.Size(110, 35);
             this.ScrapButton.TabIndex = 23;
@@ -192,7 +194,7 @@
             this.UpdateButton.FlatAppearance.BorderSize = 0;
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.ForeColor = System.Drawing.Color.White;
-            this.UpdateButton.Location = new System.Drawing.Point(306, 312);
+            this.UpdateButton.Location = new System.Drawing.Point(306, 355);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(110, 35);
             this.UpdateButton.TabIndex = 22;
@@ -207,7 +209,7 @@
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(190, 312);
+            this.SaveButton.Location = new System.Drawing.Point(190, 355);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(110, 35);
             this.SaveButton.TabIndex = 21;
@@ -215,12 +217,31 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // QuantityTextBox
+            // 
+            this.QuantityTextBox.Location = new System.Drawing.Point(194, 313);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(599, 25);
+            this.QuantityTextBox.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(50, 312);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 23);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Quantity";
+            // 
             // ProductAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 430);
+            this.ClientSize = new System.Drawing.Size(924, 430);
             this.ControlBox = false;
+            this.Controls.Add(this.QuantityTextBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.ScrapButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.SaveButton);
@@ -266,5 +287,7 @@
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.ComboBox BrandComboBox;
         public System.Windows.Forms.ComboBox CategoryComboBox;
+        public System.Windows.Forms.TextBox QuantityTextBox;
+        private System.Windows.Forms.Label label7;
     }
 }
