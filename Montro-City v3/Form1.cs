@@ -105,5 +105,12 @@ namespace Montro_City_v3
             plf.LoadRecords();
             plf.Show();
         }
+
+        private void StockInButton_Click(object sender, EventArgs e)
+        {
+            StockIn stk = new StockIn();
+            stk.LoadProduct();
+            stk.ShowDialog();
+        }
     }
 }

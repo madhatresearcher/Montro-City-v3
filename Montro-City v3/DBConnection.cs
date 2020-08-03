@@ -10,7 +10,7 @@ namespace Montro_City_v3
     {
         public string MyConnection()
         {
-            string con = @"Data Source=VELO-CITY;Initial Catalog=montrocitydb;Integrated Security=True";
+            string con = @"Data Source=LONDORIATH;Initial Catalog=montrocitydb;Integrated Security=True";
             return con;
         }
     }

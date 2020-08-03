@@ -96,8 +96,9 @@ namespace Montro_City_v3
                     cn.Close();
 
                     cn.Open();
-                    cm = new SqlCommand("INSERT INTO ProductTable (pcode, pdesc, bid, cid, price) VALUES (@pcode, @pdesc, @bid, @cid, @price)", cn);
+                    cm = new SqlCommand("INSERT INTO ProductTable (pcode, barcode, pdesc, bid, cid, price) VALUES (@pcode, @barcode, @pdesc, @bid, @cid, @price)", cn);
                     cm.Parameters.AddWithValue("@pcode", PCODETextBox.Text);
+                    cm.Parameters.AddWithValue("@barcode", BarcodeTextBox.Text);
                     cm.Parameters.AddWithValue("@pdesc", PDescTextBox.Text);
                     cm.Parameters.AddWithValue("@bid", bid);
                     cm.Parameters.AddWithValue("@cid", cid);
@@ -119,6 +120,7 @@ namespace Montro_City_v3
         public void Clear()
         {
             PCODETextBox.Clear();
+            BarcodeTextBox.Clear();
             PDescTextBox.Clear();
             BrandComboBox.Text = "";
             CategoryComboBox.Text = "";
@@ -152,8 +154,9 @@ namespace Montro_City_v3
                     cn.Close();
 
                     cn.Open();
-                    cm = new SqlCommand("UPDATE ProductTable SET pdesc=@pdesc, bid=@bid, cid=@cid, price=@price where pcode like @pcode", cn);
+                    cm = new SqlCommand("UPDATE ProductTable SET barcode=@barcode, pdesc=@pdesc, bid=@bid, cid=@cid, price=@price where pcode like @pcode", cn);
                     cm.Parameters.AddWithValue("@pcode", PCODETextBox.Text);
+                    cm.Parameters.AddWithValue("@barcode", BarcodeTextBox.Text);
                     cm.Parameters.AddWithValue("@pdesc", PDescTextBox.Text);
                     cm.Parameters.AddWithValue("@bid", bid);
                     cm.Parameters.AddWithValue("@cid", cid);
@@ -171,6 +174,11 @@ namespace Montro_City_v3
                 cn.Close();
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void QuantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

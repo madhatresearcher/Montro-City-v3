@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.StockInButton = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel2.Controls.Add(this.StockInButton);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button8);
@@ -80,6 +82,22 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // StockInButton
+            // 
+            this.StockInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StockInButton.FlatAppearance.BorderSize = 0;
+            this.StockInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StockInButton.ForeColor = System.Drawing.Color.White;
+            this.StockInButton.Image = ((System.Drawing.Image)(resources.GetObject("StockInButton.Image")));
+            this.StockInButton.Location = new System.Drawing.Point(19, 277);
+            this.StockInButton.Name = "StockInButton";
+            this.StockInButton.Size = new System.Drawing.Size(260, 30);
+            this.StockInButton.TabIndex = 12;
+            this.StockInButton.Text = "Stock In";
+            this.StockInButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.StockInButton.UseVisualStyleBackColor = true;
+            this.StockInButton.Click += new System.EventHandler(this.StockInButton_Click);
+            // 
             // button9
             // 
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -87,7 +105,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(13, 516);
+            this.button9.Location = new System.Drawing.Point(13, 519);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(260, 30);
             this.button9.TabIndex = 11;
@@ -102,7 +120,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(22, 448);
+            this.button7.Location = new System.Drawing.Point(22, 474);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(260, 30);
             this.button7.TabIndex = 10;
@@ -117,7 +135,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(28, 406);
+            this.button8.Location = new System.Drawing.Point(28, 433);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(260, 30);
             this.button8.TabIndex = 9;
@@ -132,7 +150,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(15, 364);
+            this.button6.Location = new System.Drawing.Point(15, 394);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(260, 30);
             this.button6.TabIndex = 8;
@@ -148,7 +166,7 @@
             this.ManageBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ManageBrand.ForeColor = System.Drawing.Color.White;
             this.ManageBrand.Image = ((System.Drawing.Image)(resources.GetObject("ManageBrand.Image")));
-            this.ManageBrand.Location = new System.Drawing.Point(29, 323);
+            this.ManageBrand.Location = new System.Drawing.Point(29, 352);
             this.ManageBrand.Name = "ManageBrand";
             this.ManageBrand.Size = new System.Drawing.Size(260, 30);
             this.ManageBrand.TabIndex = 7;
@@ -164,7 +182,7 @@
             this.CategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CategoryButton.ForeColor = System.Drawing.Color.White;
             this.CategoryButton.Image = ((System.Drawing.Image)(resources.GetObject("CategoryButton.Image")));
-            this.CategoryButton.Location = new System.Drawing.Point(35, 281);
+            this.CategoryButton.Location = new System.Drawing.Point(35, 313);
             this.CategoryButton.Name = "CategoryButton";
             this.CategoryButton.Size = new System.Drawing.Size(260, 30);
             this.CategoryButton.TabIndex = 6;
@@ -180,7 +198,7 @@
             this.ProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProductButton.ForeColor = System.Drawing.Color.White;
             this.ProductButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductButton.Image")));
-            this.ProductButton.Location = new System.Drawing.Point(34, 243);
+            this.ProductButton.Location = new System.Drawing.Point(34, 239);
             this.ProductButton.Name = "ProductButton";
             this.ProductButton.Size = new System.Drawing.Size(260, 30);
             this.ProductButton.TabIndex = 5;
@@ -196,7 +214,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(28, 203);
+            this.button2.Location = new System.Drawing.Point(28, 202);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(260, 30);
             this.button2.TabIndex = 4;
@@ -270,7 +288,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -298,6 +315,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button StockInButton;
     }
 }
 

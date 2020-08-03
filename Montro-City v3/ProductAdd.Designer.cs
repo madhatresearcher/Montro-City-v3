@@ -45,7 +45,7 @@
             this.ScrapButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.QuantityTextBox = new System.Windows.Forms.TextBox();
+            this.BarcodeTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).BeginInit();
@@ -104,7 +104,7 @@
             // 
             // PDescTextBox
             // 
-            this.PDescTextBox.Location = new System.Drawing.Point(190, 121);
+            this.PDescTextBox.Location = new System.Drawing.Point(190, 168);
             this.PDescTextBox.Name = "PDescTextBox";
             this.PDescTextBox.Size = new System.Drawing.Size(599, 25);
             this.PDescTextBox.TabIndex = 12;
@@ -113,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 120);
+            this.label3.Location = new System.Drawing.Point(50, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 23);
             this.label3.TabIndex = 11;
@@ -123,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 167);
+            this.label4.Location = new System.Drawing.Point(50, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 23);
             this.label4.TabIndex = 13;
@@ -132,7 +132,7 @@
             // BrandComboBox
             // 
             this.BrandComboBox.FormattingEnabled = true;
-            this.BrandComboBox.Location = new System.Drawing.Point(190, 168);
+            this.BrandComboBox.Location = new System.Drawing.Point(190, 215);
             this.BrandComboBox.Name = "BrandComboBox";
             this.BrandComboBox.Size = new System.Drawing.Size(599, 25);
             this.BrandComboBox.TabIndex = 14;
@@ -140,7 +140,7 @@
             // CategoryComboBox
             // 
             this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Location = new System.Drawing.Point(190, 220);
+            this.CategoryComboBox.Location = new System.Drawing.Point(190, 267);
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(599, 25);
             this.CategoryComboBox.TabIndex = 16;
@@ -149,7 +149,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 219);
+            this.label5.Location = new System.Drawing.Point(50, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 23);
             this.label5.TabIndex = 15;
@@ -157,7 +157,7 @@
             // 
             // PriceTextBox
             // 
-            this.PriceTextBox.Location = new System.Drawing.Point(190, 267);
+            this.PriceTextBox.Location = new System.Drawing.Point(190, 314);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(599, 25);
             this.PriceTextBox.TabIndex = 18;
@@ -166,7 +166,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(50, 266);
+            this.label6.Location = new System.Drawing.Point(50, 313);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 23);
             this.label6.TabIndex = 17;
@@ -217,22 +217,22 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // QuantityTextBox
+            // BarcodeTextBox
             // 
-            this.QuantityTextBox.Location = new System.Drawing.Point(194, 313);
-            this.QuantityTextBox.Name = "QuantityTextBox";
-            this.QuantityTextBox.Size = new System.Drawing.Size(599, 25);
-            this.QuantityTextBox.TabIndex = 25;
+            this.BarcodeTextBox.Location = new System.Drawing.Point(190, 119);
+            this.BarcodeTextBox.Name = "BarcodeTextBox";
+            this.BarcodeTextBox.Size = new System.Drawing.Size(599, 25);
+            this.BarcodeTextBox.TabIndex = 25;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(50, 312);
+            this.label7.Location = new System.Drawing.Point(50, 118);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 23);
+            this.label7.Size = new System.Drawing.Size(75, 23);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Quantity";
+            this.label7.Text = "Barcode";
             // 
             // ProductAdd
             // 
@@ -240,7 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 430);
             this.ControlBox = false;
-            this.Controls.Add(this.QuantityTextBox);
+            this.Controls.Add(this.BarcodeTextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ScrapButton);
             this.Controls.Add(this.UpdateButton);
@@ -287,7 +287,7 @@
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.ComboBox BrandComboBox;
         public System.Windows.Forms.ComboBox CategoryComboBox;
-        public System.Windows.Forms.TextBox QuantityTextBox;
+        public System.Windows.Forms.TextBox BarcodeTextBox;
         private System.Windows.Forms.Label label7;
     }
 }
